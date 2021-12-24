@@ -19,7 +19,8 @@ let searchMode = false;
 
 
 
-function HomePage(props) {
+function HomePage(props) { 
+  console.log(props);
   const locations = props.locationArray.map(item=>{
     return item._id;
   })
@@ -78,6 +79,7 @@ new Array(apartment.length).fill(true)
    const requiredLocations = locations.filter((_,index) =>{
      return checkedState[index];
    })
+   console.log(requiredLocations);
    const requiredPrices = priceList.filter((_,index) =>{
     return pcheckedState[index];
   });

@@ -4,17 +4,21 @@ import { MongoClient } from 'mongodb';
 // POST /api/new-meetup
 
 async function handler(req, res) {
+  console.log('inside API');
   if (req.method === 'POST') {
     const data = req.body;
 
     const client = await MongoClient.connect(
       'mongodb+srv://NovaAnn:kwmwBi9wmLJ0nYBw@cluster0.nn0w8.mongodb.net/myNextDatabase?retryWrites=true&w=majority'
     );
+    console.log(client);
     const db = client.db();
 
     const meetupsCollection = db.collection('meetups');
+    console.log(meetupsCollection);
 
     const result = await meetupsCollection.find(data).toArray();
+    console.log(result);
 
 
     client.close();
