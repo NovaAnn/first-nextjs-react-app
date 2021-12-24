@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "heroku-postbuild": "npm run build",
-    "start": "next start"
+    "start": "next start-p $PORT"
+  },
+  "engines": {
+    "node": "^14.17.6"
   },
   "dependencies": {
     "bootstrap": "^5.1.3",
