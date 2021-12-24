@@ -365,7 +365,7 @@ export async function getStaticProps() {
         heater: meetup.heater,
         description: meetup.description,
       
-        _id: meetup._id,
+        id: meetup._id.toString(),
         
       })),
       priceArray:yourData.categorizedByPrice,
