@@ -126,7 +126,7 @@ new Array(apartment.length).fill(true)
     // }); 
     const response = await fetch('/api/new-meetup', {
       method: 'POST',
-      body: JSON.stringify(enteredMeetupData),
+      body: JSON.stringify(totQuery),
       headers: {
         'Content-Type': 'application/json',
       },
