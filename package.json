@@ -18,7 +18,7 @@
     "dev": "next dev",
     "build": "next build",
     "heroku-postbuild": "npm run build",
-    "start": "next start-p $PORT"
+    "start": "next start -p $PORT"
   },
   "engines": {
     "node": "^14.17.6"
