@@ -5,6 +5,7 @@ import { MongoClient } from 'mongodb';
 
 async function handler(req, res) {
   console.log('inside meetup')
+  console.log('This works');
   if (req.method === 'POST') {
     const data = req.body;
 
