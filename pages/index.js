@@ -117,7 +117,7 @@ new Array(apartment.length).fill(true)
  
   async function addMeetupHandler() {
     const url = '/api/search';
-    const response = await fetch(url, {
+    const response = await fetch('/api/new-meetup', {
       method: 'POST',
       body: JSON.stringify(totQuery),
       headers: {
