@@ -19,8 +19,7 @@ let searchMode = false;
 
 
 
-function HomePage(props) { 
-  console.log(props);
+function HomePage(props) {
   const locations = props.locationArray.map(item=>{
     return item._id;
   })
@@ -79,7 +78,6 @@ new Array(apartment.length).fill(true)
    const requiredLocations = locations.filter((_,index) =>{
      return checkedState[index];
    })
-   console.log(requiredLocations);
    const requiredPrices = priceList.filter((_,index) =>{
     return pcheckedState[index];
   });
@@ -118,7 +116,7 @@ new Array(apartment.length).fill(true)
 
  
   async function addMeetupHandler() {
-    const url = '/api/' + props.meetups[0].price;
+    const url = '/api/search';
     const response = await fetch(url, {
       method: 'POST',
       body: JSON.stringify(totQuery),
@@ -192,8 +190,6 @@ new Array(apartment.length).fill(true)
     
     
   }
-  console.log(searchMode);
-  console.log(refinedMeetups);
   return (
     <Fragment>
       <Head>
