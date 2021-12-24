@@ -117,13 +117,20 @@ new Array(apartment.length).fill(true)
  
   async function addMeetupHandler() {
     const url = '/api/search';
+    // const response = await fetch('/api/new-meetup', {
+    //   method: 'POST',
+    //   body: JSON.stringify(totQuery),
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    // }); 
     const response = await fetch('/api/new-meetup', {
       method: 'POST',
-      body: JSON.stringify(totQuery),
+      body: JSON.stringify(enteredMeetupData),
       headers: {
         'Content-Type': 'application/json',
       },
-    }); 
+    });
     const responseData = await response.json();
    if (responseData.result){
     refinedMeetups = responseData.result;
