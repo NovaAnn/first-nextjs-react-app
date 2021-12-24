@@ -5,10 +5,11 @@ import 'font-awesome/css/font-awesome.min.css';
 import classes from './MeetupItem.module.css';
 
 function MeetupItem(props) {
+  console.log(props);
   const router = useRouter();
 
   function showDetailsHandler() {
-    router.push('/' + props.id);
+    router.push('/' + props.id.toString());
   }
 
   return (

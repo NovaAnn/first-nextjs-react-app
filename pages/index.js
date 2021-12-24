@@ -190,6 +190,8 @@ new Array(apartment.length).fill(true)
     
     
   }
+  console.log(searchMode);
+  console.log(refinedMeetups);
   return (
     <Fragment>
       <Head>
@@ -363,7 +365,7 @@ export async function getStaticProps() {
         heater: meetup.heater,
         description: meetup.description,
       
-        id: meetup._id.toString(),
+        _id: meetup._id,
         
       })),
       priceArray:yourData.categorizedByPrice,
